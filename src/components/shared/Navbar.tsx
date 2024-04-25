@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { signOut } from "next-auth/react";
 import Link from "next/link";
@@ -70,7 +70,14 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
       </div>
       <div className="navbar-end">
         {session?.user ? (
-          <button onClick={()=>signOut({callbackUrl:"http://localhost:3000/"})} className="btn btn-error btn-outline text-white rounded-full px-5">
+          <button
+            onClick={() =>
+              signOut({
+                callbackUrl: "https://next-auth-client-ten.vercel.app/",
+              })
+            }
+            className="btn btn-error btn-outline text-white rounded-full px-5"
+          >
             Logout
           </button>
         ) : (

@@ -17,6 +17,6 @@ export const authOptions:NextAuthOptions = {
     pages: {
       signIn:"/login"  
     },
-    secret:process.env.NEXTAUTH_URL as string
+    secret:process.env.NEXTAUTH_SECRET as string
 }
 

@@ -22,7 +22,6 @@ const RegisterPage = () => {
 const router=useRouter()
 
   const onSubmit = async (data: UserData) => {
-    console.log(data);
     const res=await registerUser(data)
     if(res.success){
       alert(res.message)
